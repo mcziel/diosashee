@@ -1,0 +1,82 @@
+==
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diosashee</title>
+    <link rel="shortcut icon" type="image/png" href="{{"d_black.ico"|media}}"/>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link href="{{ ['assets/css/bootstrap.min.css','assets/css/baguetteBox.min.css','assets/css/thumbnail-gallery.css']|theme }}" rel="stylesheet">
+    <style>
+        .lightbox2{
+          position: fixed;
+          z-index: 9999;
+          background: rgba(0,0,0,0.20);
+          display: block;
+          height: 100%;
+          width: 100%;
+          top:0;
+          left: 0;
+        }
+        .lightbox2 form{
+          background: #fff;
+          padding:30px;
+          margin-top:10%;
+          position: relative;
+        }
+        .lightbox2 form .close{
+          position:absolute;
+          top:10px;
+          right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+ {% page %}
+ 
+<script src="{{ ['@jquery','@framework','@framework.extras','assets/js/baguetteBox.min.js','assets/js/tether.min.js','assets/js/bootstrap.min.js']|theme }}"></script>
+<script>
+    $(document).ready(function(){
+        baguetteBox.run('.tz-gallery');
+    });
+</script>
+<div class="lightbox2" style="display:none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <form class="ordenarForm">
+                    <a href="javascript:;" onClick="$('.lightbox2').fadeOut('fast');" class="close">x</a>
+                    <h1>Contáctanos</h1><br>
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input class="form-control" type="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Email</label>
+                        <input class="form-control" type="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Teléfono</label>
+                        <input class="form-control" type="phone">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary">Enviar</button>
+                   
+                   <br>
+                   <br>
+                   <div class="alert alert-success">
+                          Pedido Enviado correctamente. 
+                    </div>
+                   <div class="alert alert-info">
+                          Te contactaremos tan pronto como podamos.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+title: Category
+modelClass: AndresLora\Diosashee\Models\Category
+toolbar:
+    buttons: reorder_toolbar

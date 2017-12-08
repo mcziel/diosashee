@@ -1,0 +1,10 @@
+name: Category
+form: $/andreslora/diosashee/models/category/fields.yaml
+modelClass: AndresLora\Diosashee\Models\Category
+defaultRedirect: andreslora/diosashee/category
+create:
+    redirect: 'andreslora/diosashee/category/update/:id'
+    redirectClose: andreslora/diosashee/category
+update:
+    redirect: andreslora/diosashee/category
+    redirectClose: andreslora/diosashee/category

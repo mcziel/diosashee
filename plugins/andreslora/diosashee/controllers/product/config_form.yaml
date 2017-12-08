@@ -1,0 +1,10 @@
+name: Product
+form: $/andreslora/diosashee/models/product/fields.yaml
+modelClass: AndresLora\Diosashee\Models\Product
+defaultRedirect: andreslora/diosashee/product
+create:
+    redirect: 'andreslora/diosashee/product/update/:id'
+    redirectClose: andreslora/diosashee/product
+update:
+    redirect: andreslora/diosashee/product
+    redirectClose: andreslora/diosashee/product

@@ -1,0 +1,12 @@
+list: $/andreslora/diosashee/models/product/columns.yaml
+modelClass: AndresLora\Diosashee\Models\Product
+title: Product
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'andreslora/diosashee/product/update/:id'

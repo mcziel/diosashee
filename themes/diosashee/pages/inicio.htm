@@ -1,0 +1,54 @@
+title = "Inicio"
+url = "/"
+layout = "Layout"
+is_hidden = 0
+==
+<?php
+use AndresLora\Diosashee\Models\Product;
+
+function onStart()
+{
+    $this['products'] = Product::where("status", 1)->orderBy("created_at","DESC")->paginate(6);
+}
+?>
+==
+<div class="container gallery-container">
+    <h1>Diosashee</h1>
+    <p class="page-description text-center">Pretty and Fashion means Diosashee</p> 
+    <p class="page-description text-center">
+        <a target="_blank" style="text-decoration:none;" href="https://www.instagram.com/diosashee.store/">
+            <img src="{{"002-instagram.png"|media}}">
+            @diosashee.store   
+        </a>
+        <a target="_blank" style="text-decoration:none;" href="tel:18296016641">
+            <img src="{{"001-whatsapp.png"|media}}">
+            829-601-6641
+        </a>
+    </p>
+    <!-- <p class="page-description text-center">Aquí va el slogan que Cleo no se inventa todavia</p> -->
+    <div class="tz-gallery">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <a class="lightbox" href="{{product.featured_image.getPath}}">
+                        <img class="img-responsive" src="{{product.featured_image.thumb(400,400)}}" alt="{{product.title}}">
+                    </a>
+                    <div class="caption">
+                        <h3>{{product.title}}</h3>
+                        <p>RD$ {{product.price|number_format}}</p><br>
+                        <!-- <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary">Ordenar</button> -->
+                          <!-- Trigger the modal with a button -->
+                        <button type="button" class="btn btn-primary btn-lg" onClick="$('.lightbox2').fadeIn('fast');">Ordenar</button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+               {{ products.render|raw }} 
+            </div>
+        </div>
+    </div>
+</div>

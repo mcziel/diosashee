@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table andreslora_diosashee_products'
+    - builder_table_create_andreslora_diosashee_products.php
+1.0.3:
+    - 'Updated table andreslora_diosashee_products'
+    - builder_table_update_andreslora_diosashee_products.php
+1.0.4:
+    - 'Created table andreslora_diosashee_categories'
+    - builder_table_create_andreslora_diosashee_categories.php
+1.0.5:
+    - 'Updated table andreslora_diosashee_products'
+    - builder_table_update_andreslora_diosashee_products_2.php

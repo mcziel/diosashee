@@ -1,0 +1,19 @@
+plugin:
+    name: 'andreslora.diosashee::lang.plugin.name'
+    description: 'andreslora.diosashee::lang.plugin.description'
+    author: 'Andrés Lora'
+    icon: oc-icon-adjust
+    homepage: ''
+permissions:
+    ALL:
+        tab: ALL
+        label: ALL
+navigation:
+    products:
+        label: Productos
+        url: andreslora/diosashee/product
+        icon: icon-cart-plus
+    categories:
+        label: Categorias
+        url: andreslora/diosashee/category
+        icon: icon-list
